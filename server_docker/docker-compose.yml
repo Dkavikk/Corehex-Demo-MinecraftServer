@@ -12,8 +12,6 @@ services:
     ports:
       - "25565:25577"
       - "19132:19132/udp"
-    volumes:
-      - ../server_velocity/plugins:/server/plugins
     networks:
       - minecraft-net
 
@@ -37,8 +35,6 @@ services:
       - minecraft-net
     expose:
       - "25565"
-    volumes:
-      - ../server_lobby/plugins:/data/plugins
 
   minigames:
     build:
@@ -60,8 +56,6 @@ services:
       - minecraft-net
     expose:
       - "25565"
-    volumes:
-      - ../server_minigame/plugins:/data/plugins
 
   builds:
     build:
@@ -83,8 +77,6 @@ services:
       - minecraft-net
     expose:
       - "25565"
-    volumes:
-      - ../server_builders/plugins:/data/plugins
 
 networks:
   minecraft-net:
